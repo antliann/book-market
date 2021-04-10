@@ -25,6 +25,9 @@ export default function Item(props) {
                     <span className="price">{props.price}</span>
                 <span className="currency">{' ' + props.currency}</span>
             </p>
+            <button onClick={props.addToCart} className="add-to-cart">
+                <img src="cart.svg" alt="Cart" />
+            </button>
         </div>
     );
 }

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Item from "./Item";
 
 
-export default function GetBooks(props) {
+export default function BooksList(props) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
@@ -24,9 +24,9 @@ export default function GetBooks(props) {
     }, [props.query])
 
     if (error) {
-        return <div>Error: {error.message}. Please, change your query.</div>;
+        return <div className="info-message">Error: {error.message}. Please, change your query.</div>;
     } else if (!isLoaded) {
-        return <div>Loading...</div>;
+        return <div className="info-message">Loading...</div>;
     } else {
         return (
             items ?
@@ -43,9 +43,10 @@ export default function GetBooks(props) {
                             item.saleInfo.listPrice?.currencyCode || "Unavailable"
                         }
                         googleBooksLink={item.volumeInfo.canonicalVolumeLink}
+                        addToCart={() => props.addToCart()}
                     />
                 ) :
-                <div>No results. Please, change your query</div>
+                <div className="info-message">No results found. Please, change your query</div>
         );
     }
 }
