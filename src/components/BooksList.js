@@ -8,6 +8,7 @@ export default function GetBooks(props) {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
+        setIsLoaded(false);
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${props.query}&maxResults=40&filter=paid-ebooks`)
             .then(res => res.json())
             .then(
@@ -34,9 +35,9 @@ export default function GetBooks(props) {
                         key={item.id}
                         bookName={item.volumeInfo.title}
                         bookAuthors={item.volumeInfo.authors}
-                        imgUrl={item.volumeInfo.imageLinks?.thumbnail || "No image"}
-                        rating={item.volumeInfo.averageRating?.toFixed(1) || "No rating"}
-                        price={item.saleInfo.retailPrice?.amount || item.saleInfo.listPrice?.amount}
+                        imgUrl={item.volumeInfo.imageLinks?.thumbnail}
+                        rating={item.volumeInfo.averageRating}
+                        price={item.saleInfo.retailPrice?.amount || item.saleInfo.listPrice?.amount || ''}
                         currency={
                             item.saleInfo.retailPrice?.currencyCode ||
                             item.saleInfo.listPrice?.currencyCode || "Unavailable"
