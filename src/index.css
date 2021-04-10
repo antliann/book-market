@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    outline: none;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    padding: 40px;
+    background-color: #fafafa;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    align-self: start;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+.books-list {
+    display: grid;
+    column-gap: 25px;
+    row-gap: 25px;
+    grid-template-columns: repeat(auto-fill, 230px);
+    margin: auto;
+    justify-content: center;
+}
+
+.item {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    /*position: relative;*/
+    display: grid;
+    grid-template-rows: 220px min-content auto 70px 30px;
+}
+
+.item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+    transition: 100ms;
+}
+
+/*.item:hover .rating-container {*/
+/*    transform: scale(0.98);*/
+/*    transition: 100ms;*/
+/*}*/
+
+.img-container {
+    height: 180px;
+    max-width: 190px;
+    justify-self: center;
+    padding-top: 10px;
+}
+
+.book-img {
+    border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    height: 180px;
+    max-width: 190px;
+}
+
+.book-name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.book-author {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+}
+
+.add-to-cart-btn {
+    /*position: absolute;*/
+    /*bottom: 20px;*/
+}
+
+.rating-container {
+    background-color: #E4E4E4;
+    height: 28px;
+    width: 143px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.rating-caption {
+    color: #444;
+    margin-left: 2px;
+}
+
+.price-container {
+    /*position: absolute;*/
+    /*bottom: 50px;*/
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 500;
+}

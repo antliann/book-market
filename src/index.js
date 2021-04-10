@@ -2,14 +2,12 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import GetBooks from "./App";
+import App from "./App.js";
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <div>
-      <GetBooks/>
-    </div>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
