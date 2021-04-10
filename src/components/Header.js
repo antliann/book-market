@@ -1,6 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import ReactDOM from 'react-dom';
-
+import React, {useState} from 'react';
 
 export default function Header(props) {
     const [query, changeQuery] = useState('');

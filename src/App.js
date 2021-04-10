@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import Item from "./components/Item";
+import React, {useState} from 'react';
 import Header from "./components/Header";
 import BooksList from "./components/BooksList";
 

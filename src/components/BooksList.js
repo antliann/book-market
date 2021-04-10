@@ -33,7 +33,7 @@ export default function GetBooks(props) {
                     <Item
                         key={item.id}
                         bookName={item.volumeInfo.title}
-                        bookAuthor={makeAuthorsList(item.volumeInfo.authors)}
+                        bookAuthors={item.volumeInfo.authors}
                         imgUrl={item.volumeInfo.imageLinks?.thumbnail || "No image"}
                         rating={item.volumeInfo.averageRating?.toFixed(1) || "No rating"}
                         price={item.saleInfo.retailPrice?.amount || item.saleInfo.listPrice?.amount}
@@ -47,10 +47,4 @@ export default function GetBooks(props) {
                 <div>No results. Please, change your query</div>
         );
     }
-}
-
-function makeAuthorsList(authors) {
-    if (!authors) return "No author";
-    if (authors.length < 3) return authors.join(' & ');
-    else return authors[0] + ' and others';
 }

@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import RatingInStars from "./RatingInStars";
-// import AddToCartButton from "./AddToCardButton";
 
 
 export default function Item(props) {
@@ -14,7 +12,7 @@ export default function Item(props) {
                 {props.bookName}
             </a>
             <p className="book-author">
-                {props.bookAuthor}
+                {makeAuthorsList(props.bookAuthors)}
             </p>
             <div>
                 <RatingInStars rating={props.rating}/>
@@ -32,4 +30,10 @@ export default function Item(props) {
             </p>
         </div>
     );
+}
+
+function makeAuthorsList(authors) {
+    if (!authors) return "No author";
+    if (authors.length < 3) return authors.join(' & ');
+    else return authors[0] + ' and others';
 }
