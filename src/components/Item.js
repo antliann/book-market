@@ -1,35 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import RatingInStars from "RatingInStars";
-//import AddToCartButton from "AddToCardButton";
-
-function RatingInStars(props) {
-    return (
-        <div className="rating-container">
-            <div style={{
-                width: props.rating * 20 + '%',
-                height: 28 + 'px',
-                backgroundColor: '#FFC107',
-                position: "absolute",
-            }}>
-            </div>
-            <img src="stars.svg" alt="rating" style={{
-                position: "absolute",
-                top: -1,
-                left: -1
-            }}/>
-        </div>
-    );
-}
+import RatingInStars from "./RatingInStars";
+// import AddToCartButton from "./AddToCardButton";
 
 
 export default function Item(props) {
     return (
         <div className="item">
-            <a href={props.googleBooksLink} className="img-container">
+            <a href={props.googleBooksLink} className="img-container" target="_blank">
                 <img src={props.imgUrl} className="book-img" alt="Book"/>
             </a>
-            <a href={props.googleBooksLink} className="book-name">
+            <a href={props.googleBooksLink} className="book-name" target="_blank">
                 {props.bookName}
             </a>
             <p className="book-author">
