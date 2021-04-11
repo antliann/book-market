@@ -14,7 +14,10 @@ export default function App() {
             <Header
                 doSearch={(searchInput) => searchQuery(searchInput)}
                 items={itemsInCart}
-                openModal={() => setIfCartModalIsOpened(true)}
+                openModal={() => {
+                    document.body.style.overflowY = 'hidden';
+                    setIfCartModalIsOpened(true)
+                }}
             />
             <div className="books-list">
                 <BooksList
@@ -34,17 +37,20 @@ export default function App() {
             </div>
             <CartModal
                 isOpened={cartModalIsOpened}
-                closeModal={() => setIfCartModalIsOpened(false)}
+                closeModal={() => {
+                    document.body.style.overflowY = 'auto';
+                    setIfCartModalIsOpened(false)
+                }}
                 items={itemsInCart}
                 changeQuantity={function (id, newQuantity) {
-                        for (let i = 0; i < itemsInCart.length; i++) {
-                            if (itemsInCart[i].id === id) {
-                                let newItems = itemsInCart.slice();
-                                newItems[i].quantity = newQuantity;
-                                setItemsInCart(newItems);
-                                return;
-                            }
+                    for (let i = 0; i < itemsInCart.length; i++) {
+                        if (itemsInCart[i].id === id) {
+                            let newItems = itemsInCart.slice();
+                            newItems[i].quantity = newQuantity;
+                            setItemsInCart(newItems);
+                            return;
                         }
+                    }
                 }}
                 removeItem={function (id) {
                     if (window.confirm("Do you want to remove this item from cart?")) {
