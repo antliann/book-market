@@ -7,7 +7,7 @@ export default function Item(props) {
         <div className="item">
             <a href={props.googleBooksLink} className="img-container" target="_blank">
                 {props.imgUrl ?
-                    <img src={props.imgUrl} className="book-img" alt="Book"/> :
+                    <img src={props.imgUrl} className="book-img" alt="Book cover"/> :
                     "(No cover image)"
                 }
             </a>
@@ -22,17 +22,17 @@ export default function Item(props) {
                 </span>
             </div>
             <p className="price-container">
-                    <span className="price">{props.price}</span>
+                <span className="price">{(+props.price).toFixed(2)}</span>
                 <span className="currency">{' ' + props.currency}</span>
             </p>
             <button onClick={props.addToCart} className="add-to-cart">
-                <img src="cart.svg" alt="Cart" />
+                <img src="cart.svg" alt="Cart" style={{pointerEvents: 'none'}} />
             </button>
         </div>
     );
 }
 
-function makeAuthorsList(authors) {
+export function makeAuthorsList(authors) {
     if (!authors) return "No author";
     if (authors.length < 3) return authors.join(' & ');
     else return authors[0] + ' and others';

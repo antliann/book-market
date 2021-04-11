@@ -37,16 +37,29 @@ export default function BooksList(props) {
                         bookAuthors={item.volumeInfo.authors}
                         imgUrl={item.volumeInfo.imageLinks?.thumbnail}
                         rating={item.volumeInfo.averageRating}
-                        price={item.saleInfo.retailPrice?.amount || item.saleInfo.listPrice?.amount || ''}
+                        price={item.saleInfo.retailPrice?.amount || item.saleInfo.listPrice?.amount || 0}
                         currency={
                             item.saleInfo.retailPrice?.currencyCode ||
                             item.saleInfo.listPrice?.currencyCode || "Unavailable"
                         }
                         googleBooksLink={item.volumeInfo.canonicalVolumeLink}
-                        addToCart={() => props.addToCart()}
+                        addToCart={() => props.addToCart({
+                            id: item.id,
+                            bookName: item.volumeInfo.title,
+                            bookAuthors: item.volumeInfo.authors,
+                            imgUrl: item.volumeInfo.imageLinks?.thumbnail,
+                            price: item.saleInfo.retailPrice?.amount || item.saleInfo.listPrice?.amount || 0,
+                            currency:
+                                item.saleInfo.retailPrice?.currencyCode ||
+                                item.saleInfo.listPrice?.currencyCode || "Unavailable",
+                            googleBooksLink: item.volumeInfo.canonicalVolumeLink,
+                            quantity: 1,
+                        })}
                     />
                 ) :
-                <div className="info-message">No results found. Please, change your query</div>
+                <div className="info-message">
+                    No results found. Please, change your query
+                </div>
         );
     }
 }
