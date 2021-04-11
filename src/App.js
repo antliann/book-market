@@ -5,7 +5,7 @@ import CartModal from "./components/CartModal";
 
 
 export default function App() {
-    const [query, searchQuery] = useState("harry potter");
+    const [query, searchQuery] = useState("programming");
     const [itemsInCart, setItemsInCart] = useState([]);
     const [cartModalIsOpened, setIfCartModalIsOpened] = useState(false);
 
@@ -36,19 +36,28 @@ export default function App() {
                 isOpened={cartModalIsOpened}
                 closeModal={() => setIfCartModalIsOpened(false)}
                 items={itemsInCart}
-                changeQuantity={
-                    function (id, newQuantity) {
-                        if (newQuantity !== 0 || window.confirm("Do you want to remove this book from the cart?")) {
-                            for (let i = 0; i < itemsInCart.length; i++) {
-                                if (itemsInCart[i].id === id) {
-                                    let newItems = itemsInCart.slice();
-                                    newItems[i].quantity = newQuantity;
-                                    setItemsInCart(newItems);
-                                    return;
-                                }
+                changeQuantity={function (id, newQuantity) {
+                        for (let i = 0; i < itemsInCart.length; i++) {
+                            if (itemsInCart[i].id === id) {
+                                let newItems = itemsInCart.slice();
+                                newItems[i].quantity = newQuantity;
+                                setItemsInCart(newItems);
+                                return;
                             }
                         }
-                    }}
+                }}
+                removeItem={function (id) {
+                    if (window.confirm("Do you want to remove this item from cart?")) {
+                        for (let i = 0; i < itemsInCart.length; i++) {
+                            if (itemsInCart[i].id === id) {
+                                let newItems = itemsInCart.slice();
+                                newItems.splice(i, 1);
+                                setItemsInCart(newItems);
+                                return;
+                            }
+                        }
+                    }
+                }}
             />
         </div>
     )

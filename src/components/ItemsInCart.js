@@ -3,7 +3,7 @@ import {makeAuthorsList} from './Item';
 
 
 export default function ItemsInCart(props) {
-    return props.items ?
+    return props.items.length ?
         props.items.map(function (item) {
                 return (
                     <div key={item.id} className="item-in-cart">
@@ -40,11 +40,14 @@ export default function ItemsInCart(props) {
                                     onClick={() => props.changeQuantity(item.id, item.quantity + 1)}
                                     className="quantity-button plus">+
                                 </button>
+                                <button className="remove-button" onClick={() => props.removeItem(item.id)}>
+                                    <img src="remove.svg" alt="Delete"/>
+                                </button>
                             </div>
                         </div>
                     </div>
                 )
             }
         ) :
-        <div className="info-message">Your cart is empty</div>;
+        <div className="info-message" style={{top: '22vh'}}>Your cart is empty</div>;
 }
