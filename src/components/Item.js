@@ -26,7 +26,7 @@ export default function Item(props) {
                 <span className="currency">{' ' + props.currency}</span>
             </p>
             <button onClick={props.addToCart} className="add-to-cart">
-                <img src="cart.svg" alt="Cart" style={{pointerEvents: 'none'}} />
+                <img src="cart.svg" alt="Cart" style={{pointerEvents: 'none'}}/>
             </button>
         </div>
     );
