@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26bf62a0-c69b-4013-b593-17e201464b61" name="Default Changelist" comment="" />
+    <list default="true" id="26bf62a0-c69b-4013-b593-17e201464b61" name="Default Changelist" comment="redux &amp; local storage storing added">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617895862528</updated>
-      <workItem from="1617895863672" duration="124474000" />
+      <workItem from="1617895863672" duration="124943000" />
     </task>
     <task id="LOCAL-00001" summary="extracting data from API response">
       <created>1617986009583</created>
