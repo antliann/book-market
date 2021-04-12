@@ -22,7 +22,7 @@ export default function Header(props) {
                 </button>
             </form>
 
-            <button className="shopping-cart" onClick={() => props.openModal()}>
+            <button className="shopping-cart" onClick={props.openModal}>
                 <img src="cart.svg" alt="Cart"/>
                 <div className="items-counter">{countItemsInCart(props.items)}</div>
             </button>

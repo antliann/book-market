@@ -5,13 +5,13 @@ import ItemsInCart from "./ItemsInCart";
 export default function CartModal(props) {
     return props.isOpened ?
         <div className="cart-window">
-            <div className="cart-outside" onClick={() => props.closeModal()}>
+            <div className="cart-outside" onClick={props.closeModal}>
             </div>
             <div className="cart-modal" style={
                 props.items.length > 2 ?
                     {marginBottom: '300px'} :
                     {top: '50%', transform: 'translate(-50%, -50%)'}}>
-                <button onClick={() => props.closeModal()} className="close-modal">
+                <button onClick={props.closeModal} className="close-modal">
                     <img src="close.svg" alt="close" width="20" height="20" style={{pointerEvents: 'none'}}/>
                 </button>
                 <h2>Your cart</h2>

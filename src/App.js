@@ -10,6 +10,7 @@ export default function App() {
     const [cartModalIsOpened, setIfCartModalIsOpened] = useState(false);
 
     return (
+        //<Provider store={store}>
         <div>
             <Header
                 doSearch={(searchInput) => searchQuery(searchInput)}
@@ -25,6 +26,7 @@ export default function App() {
                     addToCart={function (newItem) {
                         for (let i = 0; i < itemsInCart.length; i++) {
                             if (itemsInCart[i].id === newItem.id) {
+                                if (itemsInCart[i].quantity >= 50) return;
                                 let newItems = itemsInCart.slice();
                                 newItems[i].quantity++;
                                 setItemsInCart(newItems);
@@ -44,6 +46,8 @@ export default function App() {
                 items={itemsInCart}
                 changeQuantity={function (id, newQuantity) {
                     for (let i = 0; i < itemsInCart.length; i++) {
+                        if (newQuantity === 0) newQuantity = 1;
+                        if (newQuantity > 50) newQuantity = 50;
                         if (itemsInCart[i].id === id) {
                             let newItems = itemsInCart.slice();
                             newItems[i].quantity = newQuantity;
@@ -66,5 +70,6 @@ export default function App() {
                 }}
             />
         </div>
+        //</Provider>
     )
 }

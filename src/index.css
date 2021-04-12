@@ -242,7 +242,7 @@ h2 {
 
 .quantity-field {
     -moz-appearance: textfield;
-    height: 36px;
+    height: 34px;
     width: 38px;
     padding-left: 45px;
     padding-right: 45px;
@@ -265,7 +265,6 @@ h2 {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 33px;
     border: none;
-    margin-top: 4px;
     color: white;
 }
 

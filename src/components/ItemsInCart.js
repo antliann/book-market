@@ -3,6 +3,8 @@ import {makeAuthorsList} from './Item';
 
 
 export default function ItemsInCart(props) {
+    const maxItemsQuantity = 50;
+
     return props.items.length ?
         props.items.map(function (item) {
                 return (
@@ -27,7 +29,7 @@ export default function ItemsInCart(props) {
                             <div className="quantity-counter">
                                 <input
                                     onChange={(event) => props.changeQuantity(item.id, +event.target.value)}
-                                    value={item.quantity} type="number" min="1" max="50"
+                                    value={item.quantity} type="number" min="1" max={maxItemsQuantity}
                                     className="quantity-field"/>
                                 <button
                                     style={item.quantity === 1 ? {backgroundColor: '#BEBEBE', cursor: "default"} : {}}
@@ -37,6 +39,8 @@ export default function ItemsInCart(props) {
                                     className="quantity-button minus">-
                                 </button>
                                 <button
+                                    style={item.quantity >= maxItemsQuantity ?
+                                        {backgroundColor: '#BEBEBE', cursor: "default"} : {}}
                                     onClick={() => props.changeQuantity(item.id, item.quantity + 1)}
                                     className="quantity-button plus">+
                                 </button>
@@ -49,5 +53,5 @@ export default function ItemsInCart(props) {
                 )
             }
         ) :
-        <div className="info-message" style={{top: '22vh'}}>Your cart is empty</div>;
+        <div className="info-message" style={{top: '25vh'}}>Your cart is empty</div>;
 }
