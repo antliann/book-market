@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="26bf62a0-c69b-4013-b593-17e201464b61" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="f008f836-8758-4eaf-b67b-62e329f8a8da" />
+  </component>
+  <component name="ProjectId" id="1qtPMDC6uVztS6YvhjvQbkIlrkB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Progs\book-market\public" />
+      <recent name="E:\Progs\book-market\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Progs\book-market\public" />
+      <recent name="E:\Progs\book-market\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26bf62a0-c69b-4013-b593-17e201464b61" name="Default Changelist" comment="" />
+      <created>1617895862528</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617895862528</updated>
+      <workItem from="1617895863672" duration="124474000" />
+    </task>
+    <task id="LOCAL-00001" summary="extracting data from API response">
+      <created>1617986009583</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617986009583</updated>
+    </task>
+    <task id="LOCAL-00002" summary="visual appearance of books list">
+      <created>1618060619240</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618060619240</updated>
+    </task>
+    <task id="LOCAL-00003" summary="components refactored &amp; search added">
+      <created>1618071334464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618071334464</updated>
+    </task>
+    <task id="LOCAL-00004" summary="rearrangements of some functions in files">
+      <created>1618074682857</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618074682857</updated>
+    </task>
+    <task id="LOCAL-00005" summary="header UI">
+      <created>1618085602274</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618085602274</updated>
+    </task>
+    <task id="LOCAL-00006" summary="prepare to cart implementing">
+      <created>1618088756502</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618088756502</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cart added">
+      <created>1618167310846</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1618167310846</updated>
+    </task>
+    <task id="LOCAL-00008" summary="full functionality of the cart">
+      <created>1618172462181</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1618172462181</updated>
+    </task>
+    <task id="LOCAL-00009" summary="css properties of the cart modal">
+      <created>1618179565087</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1618179565087</updated>
+    </task>
+    <task id="LOCAL-00010" summary="before redux adding">
+      <created>1618216418221</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1618216418221</updated>
+    </task>
+    <task id="LOCAL-00011" summary="redux &amp; local storage storing added">
+      <created>1618233534133</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1618233534133</updated>
+    </task>
+    <task id="LOCAL-00012" summary="redux &amp; local storage storing added">
+      <created>1618234716322</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1618234716322</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="extracting data from API response" />
+    <MESSAGE value="visual appearance of books list" />
+    <MESSAGE value="components refactored &amp; search added" />
+    <MESSAGE value="rearrangements of some functions in files" />
+    <MESSAGE value="header UI" />
+    <MESSAGE value="prepare to cart implementing" />
+    <MESSAGE value="cart added" />
+    <MESSAGE value="full functionality of the cart" />
+    <MESSAGE value="css properties of the cart modal" />
+    <MESSAGE value="before redux adding" />
+    <MESSAGE value="redux &amp; local storage storing added" />
+    <option name="LAST_COMMIT_MESSAGE" value="redux &amp; local storage storing added" />
+  </component>
+</project>
